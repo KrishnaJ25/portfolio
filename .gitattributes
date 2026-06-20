@@ -1,0 +1,9 @@
+# Ensure binary files are never touched by git's CRLF conversion
+*.enc binary
+*.hdr binary
+*.glb binary
+*.wasm binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
