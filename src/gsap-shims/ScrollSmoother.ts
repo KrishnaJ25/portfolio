@@ -15,12 +15,11 @@ interface ScrollSmootherConfig {
 
 class ScrollSmootherShim {
   private wrapper: HTMLElement | null;
-  private content: HTMLElement | null;
   private _paused: boolean = false;
 
   constructor(_config: ScrollSmootherConfig) {
     this.wrapper = document.querySelector(_config.wrapper || "#smooth-wrapper");
-    this.content = document.querySelector(_config.content || "#smooth-content");
+    // content is part of the config API but not needed for this shim
   }
 
   static create(config: ScrollSmootherConfig): ScrollSmootherShim {
