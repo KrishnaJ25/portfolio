@@ -53,7 +53,13 @@ const Scene = () => {
       let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
+      // Safety timeout — if model fails silently, complete loading after 8s
+      const loadingTimeout = setTimeout(() => {
+        progress.loaded();
+      }, 8000);
+
       loadCharacter().then((gltf) => {
+        clearTimeout(loadingTimeout);
         if (gltf) {
           const animations = setAnimations(gltf);
           hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
@@ -72,7 +78,14 @@ const Scene = () => {
           window.addEventListener("resize", () =>
             handleResize(renderer, camera, canvasDiv, character)
           );
+        } else {
+          // Model missing or failed — complete loading anyway
+          progress.loaded();
         }
+      }).catch(() => {
+        // Network/decode error — complete loading so user isn't stuck
+        clearTimeout(loadingTimeout);
+        progress.loaded();
       });
 
       let mouse = { x: 0, y: 0 },
