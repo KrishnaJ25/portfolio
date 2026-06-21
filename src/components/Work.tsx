@@ -69,7 +69,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Node.js, MongoDB, AWS S3, EC2, Lambda, Docker, JWT, GitHub Actions</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="StreamCore video streaming platform" />
+            <WorkImage image="/images/streamcore_architecture.png" alt="StreamCore video streaming platform" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -83,7 +83,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, Gradient Boosting, A* Algorithm, Maps API, Crime Data Processing</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Women safety navigation system" />
+            <WorkImage image="/images/women_safety_navigation_architecture.png" alt="Women safety navigation system" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -97,7 +97,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Java, JDBC, Servlets, MySQL, JUnit, Authentication</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Online banking application" />
+            <WorkImage image="/images/online_banking_architecture.png" alt="Online banking application" />
           </div>
           <div className="work-box">
             <div className="work-info">
@@ -111,7 +111,7 @@ const Work = () => {
               <h4>Tools and features</h4>
               <p>Python, Tkinter, MySQL, GUI, Inventory &amp; Billing</p>
             </div>
-            <WorkImage image="/images/placeholder.webp" alt="Restaurant management system" />
+            <WorkImage image="/images/restaurant_management_architecture.png" alt="Restaurant management system" />
           </div>
         </div>
       </div>
