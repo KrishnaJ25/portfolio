@@ -41,7 +41,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/_krishna_jodh_/"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
